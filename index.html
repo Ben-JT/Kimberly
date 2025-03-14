@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Aulas</title>
+    <link rel="stylesheet" href="style.css" media="all">
+</head>
+<body>
+    <img src="imagen/ejercicio.jpg" alt="ejercicio">
+    <div class="container">
+        <h2>Calculadora de Aulas by Kimberly</h2>
+        <label for="alumnos">Cantidad de alumnos:</label>
+        <input type="number" id="alumnos" min="0" placeholder="Ingrese el número de alumnos">
+        <button onclick="calcularAulas()">Calcular</button>
+        <button onclick="reiniciar()" class="buton_reiniciar">Reiniciar</button>
+        <p id="resultado"></p>
+    </div>
+<script src="scrip.js" charset="utf-8"></script>
+</body>
+</html>
