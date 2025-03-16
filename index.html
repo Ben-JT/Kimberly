@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Aulas</title>
-    <link rel="stylesheet" href="style.css" media="all">
-</head>
-<body>
-    <img src="imagen/ejercicio.jpg" alt="ejercicio">
-    <div class="container">
-        <h2>Calculadora de Aulas by Kimberly</h2>
-        <label for="alumnos">Cantidad de alumnos:</label>
-        <input type="number" id="alumnos" min="0" placeholder="Ingrese el número de alumnos">
-        <button onclick="calcularAulas()">Calcular</button>
-        <button onclick="reiniciar()" class="buton_reiniciar">Reiniciar</button>
-        <p id="resultado"></p>
-    </div>
-<script src="scrip.js" charset="utf-8"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Te invito un fruta</title>
+  </head>
+  <body>
+    <audio id="myAudio" src="sound/Until I Found You.mp3" type="audio/mpeg" autoplay></audio>
+
+    <main class="container">
+      <img class="cat-img" src="img/cat-0.jpg" alt="gatito bonito" />
+      <p class="title">Kimberly quieres una fruta?</p>
+      <div class="buttons">
+        <button type="button" class="btn btn--yes">Si</button>
+        <button type="button" class="btn btn--no">No</button>
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
