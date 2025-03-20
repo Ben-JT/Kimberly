@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>Flowers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Feliz dia</title>
+
+  <link rel="stylesheet" href="styles/flexbox-center-container.css" media="all">
+  <link rel="stylesheet" href="styles/system-fonts.css" media="all">
+  <link rel="stylesheet" href="styles/style.css" media="all">
 </head>
 
 <body>
-    <div class="greetings">
-        <span>H</span>
-        <span>O</span>
-        <span>L</span>
-        <span>A</span>
-    </div>
-    <div class="greetings__2">
-        <span>K</span>
-        <span>I</span>
-        <span>M</span>
-        <span>B</span>
-        <span>E</span>
-        <span>R</span>
-        <span>L</span>
-        <span>Y</span>
-    </div>
-    <div class="description">
-        <span>Tengo un mejor regalo xd</span>
-    </div>
-    <div class="button">
-        <button class="botones">
-            <a href="flower.html">PRESIONA AQUÍ</a>
-        </button>
+  <canvas id=c></canvas>
+  <canvas id="confetti"></canvas>
+  <audio id="audio" src="sound/Thinking.mp3" preload="auto"></audio>
+  <div class="container" id="count">
+    <h1 id="head">Cuenta regresiva:</h1>
+    <ul>
+      <li><span id="day"></span>dias</li>
+      <li><span id="hour"></span>horas</li>
+      <li><span id="minute"></span>minutos</li>
+      <li><span id="second"></span>segundos</li>
+    </ul>
+  </div>
+  <div id="merrywrap" class="merrywrap">
+    <canvas id="snowfall"></canvas>
+    <div class="giftbox">
+      <div class="cover">
+        <div></div>
+      </div>
+      <div id="box"></div>
     </div>
 
+  <div id="box"></div>
+  <img id="hidden-image" src="image/prodigios.jpg" alt="Descripción de la imagen" style="display: none;">
+  <div id="image-container"></div> 
+
+    
+    
 </body>
+<script src="scripts/confetti.min.js" charset="utf-8"></script>
+<script src="scripts/index.js" charset="utf-8"></script>
 
 </html>
