@@ -5,7 +5,7 @@ const canvasC = document.getElementById('c');
 const specialImage = document.getElementById('hidden-image');
 
 const config = {
-  birthdate: 'Marz 22, 2025 00:00:',
+  birthdate: 'Marz 20, 2025 00:00:',
   name: ' '
 };
 
