@@ -48,4 +48,8 @@ mostrarCalificaciones();
 
 
 
-var audio = document.querySelector("audio");
+//agregado para audio
+document.addEventListener('touchstart', function() {
+    const audio = document.getElementById('myAudio');
+    audio.play();
+});
