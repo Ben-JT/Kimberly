@@ -1,46 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Feliz dia</title>
-
-  <link rel="stylesheet" href="styles/flexbox-center-container.css" media="all">
-  <link rel="stylesheet" href="styles/system-fonts.css" media="all">
-  <link rel="stylesheet" href="styles/style.css" media="all">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <canvas id=c></canvas>
-  <canvas id="confetti"></canvas>
-  <audio id="audio" src="sound/frances limon.mp3" preload="auto"></audio>
-  <div class="container" id="count">
-    <h1 id="head">Cuenta regresiva:</h1>
-    <ul>
-      <li><span id="day"></span>dias</li>
-      <li><span id="hour"></span>horas</li>
-      <li><span id="minute"></span>minutos</li>
-      <li><span id="second"></span>segundos</li>
-    </ul>
-  </div>
-  <div id="merrywrap" class="merrywrap">
-    <canvas id="snowfall"></canvas>
-    <div class="giftbox">
-      <div class="cover">
-        <div></div>
-      </div>
-      <div id="box"></div>
+    <audio src="sound/Flores Amarillas - Floricienta .mp3" autoplay></audio>
+    <div id="lyrics">
+        
+    <h2>Kimberly no hace su tarea</h2>
+    <h3>Notas de 40 estudiantes del instituto Ramiró Priale</h3>
+    <div id="notas-container"></div>
+
+    <button class="calcular-btn" onclick="calcularNotas()">Calcular</button>
+    <button class="reiniciar-btn" onclick="reiniciarNotas()">Reiniciar</button>
+
+    <div id="resultado"></div>
+    <div>
+        <img src="/imagen/gato.png" alt="gato">
     </div>
-
-  <div id="box"></div>
-  <img id="hidden-image" src="image/prodigios.jpg" alt="Descripción de la imagen" style="display: none;">
-  <div id="image-container"></div> 
-
-    
-    
+    <script src="script.js"></script>
 </body>
-<script src="scripts/confetti.min.js" charset="utf-8"></script>
-<script src="scripts/index.js" charset="utf-8"></script>
-
 </html>
