@@ -1,28 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Notas</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <audio id="myAudio" autoplay muted>
-        <source src="sound/ella.mp3" type="audio/mpeg">
-    </audio>
-    <div id="lyrics">
+    <title>Lo siento :V</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            font-family: 'Comic Neue', cursive;
+        }
         
-    <h2>Kimberly no hace su tarea</h2>
-    <h3>Notas de 40 estudiantes del instituto Ramiró Priale</h3>
-    <div id="notas-container"></div>
+        :root {
+            --loading-width: 160px;
+            --loading-heigth: 23px;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            /* background-color: yellowgreen; */
+            background-color: rgb(114, 54, 79);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            text-align: center;
+            width: 90vw;
+            border-radius: 3%;
+        }
+        
+        .box {
+            display: inline-block;
+            border: solid black 4px;
+            width: var(--loading-width);
+            background-color: white;
+        }
+        
+        .loading-box {
+            height: var(--loading-heigth);
+            width: var(--loading-width);
+            background-color: rgb(233, 154, 220);
+            /* background-color: aliceblue; */
+            /* animation: loading 5s delay iteration-count direction fill-mode;; */
+            animation: loading 10s;
+        }
+        
+        #state-message {
+            font-size: larger;
+            font-weight: bold;
+            color: rgb(109, 109, 109);
+        }
+        
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: var(--loading-width);
+            }
+        }
+        
+        #title,
+        #result {
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #me {
+            margin-top: 8px;
+            margin-bottom: 14px;
+        }
+        
+        .box {
+            margin-top: 3px;
+        }
+    </style>
+</head>
 
-    <button class="calcular-btn" onclick="calcularNotas()">Calcular</button>
-    <button class="reiniciar-btn" onclick="reiniciarNotas()">Reiniciar</button>
+<body>
+    <main>
+        <h1 id="title">Enviando abrazo virtual</h1>
+        <div>
+            <img id="me" src="penguin.svg" alt="">
+        </div>
+        <div class="box">
+            <div class="loading-box"></div>
+        </div>
+        <h3 id="state-message">cargando...</h3>
+        <h2 id="result">&nbsp;</h2>
+        
+        <style>
+            #result {
+                text-align: center;
+                margin-top: 20px;
+                font-family: 'Arial', sans-serif;
+                font-size: 20px;
+                color: #333;
+            }
+        
+            #result button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #4CAF50; /* verde bonito */
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+        
+            #result button:hover {
+                background-color: #45a049;
+            }
+        </style>
+        
+        <div id="result"></div>
+        <div id="state-message"></div>
 
-    <div id="resultado"></div>
-    <div>
-        <img src="imagen/gato.png" alt="gato">
-    </div>
-    <script src="script.js"></script>
+        <script>
+            setTimeout(function () {
+                const message = document.getElementById('result');
+                message.innerHTML = `
+                    Abrazo enviado!<br>
+                    <button onclick="window.location.href='main.html'">Presione aquí</button>
+                `;
+            }, 10200);
+        
+            setTimeout(function () {
+                const message = document.getElementById('state-message');
+                message.innerHTML = "&nbsp;";
+            }, 10000);
+        </script>
+    </main>
 </body>
+
 </html>

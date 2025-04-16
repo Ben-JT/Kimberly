@@ -1,58 +1,23 @@
-// Función para generar nuevas calificaciones
-function generarCalificaciones() {
-    return Array.from({ length: 40 }, () => Math.floor(Math.random() * 18) + 3);
-}
+const wrapper = document.querySelector(".wrapper");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
 
+yesBtn.addEventListener("click", () => {
+  question.innerHTML = "Sabia que lo harias, niña ilusa! 😘";
+  gif.src =
+    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3hnMmp3MGUzYjh5c2V5Y2RmMno0anU5eGxwZDhxeXZ2ZXlzcXRhMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13KV2vJLM4p2SI/giphy.gif";
+});
 
-// Variable global de calificaciones
-let calificaciones = generarCalificaciones();
+noBtn.addEventListener("mouseover", () => {
+  const noBtnRect = noBtn.getBoundingClientRect();
+  const maxX = window.innerWidth - noBtnRect.width;
+  const maxY = window.innerHeight - noBtnRect.height;
 
-// Función para mostrar calificaciones en la página
-function mostrarCalificaciones() {
-    const container = document.getElementById("notas-container");
-    container.innerHTML = ""; // Limpiar notas anteriores
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-    calificaciones.forEach(calif => {
-        const div = document.createElement("div");
-        div.classList.add("nota");
-        div.textContent = calif;
-        container.appendChild(div);
-    });
-}
-
-// Función para calcular la media y la nota más baja
-function calcularNotas() {
-    let sum = 0;
-    let baja = Math.min(...calificaciones); // Encontrar el mínimo con Math.min()
-
-    // Calcular la suma total
-    sum = calificaciones.reduce((total, calif) => total + calif, 0);
-
-    let media = sum / calificaciones.length;
-
-    document.getElementById("resultado").innerHTML = 
-        `Calificación media: ${media.toFixed(2)} <br> 
-        Calificación más baja: ${baja}<br> 
-        La nota más baja siempre es de kimberly`;
-}
-
-// Función para reiniciar y generar nuevas calificaciones
-function reiniciarNotas() {
-    calificaciones = generarCalificaciones(); // Generar nuevas notas
-    mostrarCalificaciones(); // Mostrar nuevas notas
-    document.getElementById("resultado").innerHTML = ""; // Limpiar resultado
-}
-
-// Mostrar calificaciones al cargar la página
-mostrarCalificaciones();
-
-
-
-
-document.addEventListener('click', () => {
-    const audio = document.getElementById('myAudio');
-    if (audio.muted) {
-      audio.muted = false; // Desactiva el silencio
-    audio.play();
-    }
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
 });
